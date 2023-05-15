@@ -2,92 +2,101 @@ package org.example;
 
 public class Calculo {
 
-	public int calcValorMaterial(int eleccion) {
-
-		switch (eleccion){
+	public int calcValorMaterial(int eleccionMaterial) {
+		int valorMaterial;
+		switch (eleccionMaterial){
 			case 0:
-				return 6000;
+				valorMaterial = 6000;
 			case 1:
-				return 5000;
+				valorMaterial = 5000;
 			case 2:
-				return 4000;
+				valorMaterial = 4000;
+			default:
+				valorMaterial = 0;
 		}
-		return 0;
+		return valorMaterial;
 	}
 
-	public int calcValorDiseño(int [] eleccion) {
+	public int calcValorDiseño(int [] diseños) {
 
-		int costo = ((eleccion[0] * 500) + (eleccion[1] * 1200));
-		return costo;
+		int valor = ((diseños[0] * 500) + (diseños[1] * 1200));
+		return valor;
 	}
 
 	public int calcValorLargo(int eleccionLargo) {
-
+		int valorLargo;
 		switch (eleccionLargo){
 			case 0:
-				return 0;
+				valorLargo = 0;
 			case 1:
-				return 5000;
+				valorLargo = 5000;
 			case 2:
-				return 7000;
+				valorLargo = 7000;
 			case 3:
-				return 9000;
+				valorLargo = 9000;
+			default:
+				valorLargo = 0;
 		}
-		return 0;
+		return valorLargo;
 	}
 
-	public int calcValorDecoracion(int [] cantsDeco) {
+	public int calcValorDecoracion(int [] decoraciones) {
 
-		int costo = (cantsDeco[0]*600)+(cantsDeco[1]*1500);
-		return costo;
+		int valor = (decoraciones[0]*600)+(decoraciones[1]*1500);
+		return valor;
 	}
 
 	public int calcValorColores(int cantColores) {
-
+		int valorColores = 0;
 		if (Utils.validarRango(cantColores,0,2)) {
-			return 8000;
+			valorColores = 8000;
 		}else  {
-			return 9000;
+			valorColores = 9000;
 		}
+		return valorColores;
 	}
 
-	public int calcTiempoMaterial(int eleccion) {
-
-		switch (eleccion){
+	public int calcTiempoMaterial(int eleccionMaterial) {
+		int minutos;
+		switch (eleccionMaterial){
 			case 0:
-				return 50;
+				minutos = 50;
 			case 1:
-				return 30;
+				minutos = 30;
 			case 2:
-				return 15;
+				minutos = 15;
+			default:
+				minutos = 0;
 		}
-		return 0;
+		return minutos;
 	}
 
-	public int calcTiempoDiseño(int [] eleccion) {
+	public int calcTiempoDiseño(int [] diseños) {
 
-		int minutos = ((eleccion[0] * 3) + (eleccion[1] * 7));
+		int minutos = ((diseños[0] * 3) + (diseños[1] * 7));
 		return minutos;
 	}
 
 	public int calcTiempoLargo(int eleccionLargo) {
-
+		int minutos;
 		switch (eleccionLargo){
 			case 0:
-				return 0;
+				minutos = 0;
 			case 1:
-				return 20;
+				minutos = 20;
 			case 2:
-				return 25;
+				minutos = 25;
 			case 3:
-				return 30;
+				minutos = 30;
+			default:
+				minutos = 0;
 		}
-		return 0;
+		return minutos;
 	}
 
-	public int calcTiempoDecoracion(int [] cantsDeco) {
+	public int calcTiempoDecoracion(int [] decoraciones) {
 
-		int minutos = (cantsDeco[0]*4)+(cantsDeco[1]*6);
+		int minutos = (decoraciones[0]*4)+(decoraciones[1]*6);
 		return minutos;
 	}
 
