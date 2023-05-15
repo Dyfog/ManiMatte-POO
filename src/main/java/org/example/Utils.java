@@ -26,7 +26,7 @@ public class Utils {
 	 * @param min
 	 * @param max
 	 */
-	public boolean validarRango(int num, int min, int max) {
+	public static boolean validarRango(int num, int min, int max) {
 		// TODO - implement Utils.validarRango
 		throw new UnsupportedOperationException();
 	}
