@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Utils {
 
 	/**
@@ -26,14 +28,22 @@ public class Utils {
 	 * @param min
 	 * @param max
 	 */
-	public boolean validarRango(int num, int min, int max) {
-		// TODO - implement Utils.validarRango
-		throw new UnsupportedOperationException();
+	public static boolean validarRango(int num, int min, int max) {
+
+		if (num < min || num > max) {
+			return false;
+		}
+		return true;
 	}
 
-	public int ingresarSoloEntero() {
-		// TODO - implement Utils.ingresarSoloEntero
-		throw new UnsupportedOperationException();
-	}
+	public static int ingresarSoloEntero() {
 
+		Scanner in = new Scanner(System.in);
+		while (!in.hasNextInt()) {
+			System.out.println("Entrada no válida. Ingrese un número entero:");
+			in.next();
+		}
+		int numero = in.nextInt();
+		return numero;
+	}
 }
