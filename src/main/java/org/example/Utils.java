@@ -1,12 +1,10 @@
-package org.example;
-
 public class Utils {
 
 	/**
 	 * 
 	 * @param rutaArchivo
 	 */
-	public boolean validarExistenciaArchivo(String rutaArchivo) {
+	public boolean validarExistenciaArchivo(string rutaArchivo) {
 		// TODO - implement Utils.validarExistenciaArchivo
 		throw new UnsupportedOperationException();
 	}
@@ -26,7 +24,7 @@ public class Utils {
 	 * @param min
 	 * @param max
 	 */
-	public static boolean validarRango(int num, int min, int max) {
+	public boolean validarRango(int num, int min, int max) {
 		// TODO - implement Utils.validarRango
 		throw new UnsupportedOperationException();
 	}

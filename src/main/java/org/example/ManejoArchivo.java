@@ -1,32 +1,20 @@
-package org.example;
-
 public class ManejoArchivo {
 
-	private String ruta;
+	private string ruta;
 
 	/**
 	 * 
 	 * @param objeto
 	 */
-	public String crearLineaCotizacion(Object objeto) {
-		// TODO - implement ManejoArchivo.crearLineaCotizacion
-		throw new UnsupportedOperationException();
-	}
+	public string crearLineaCotizacion(CotizacionManicura objeto) {
 
-	/**
-	 * 
-	 * @param objetoCotizacion
-	 */
-	public void ingresarCotizacion(Object objetoCotizacion) {
-		// TODO - implement ManejoArchivo.ingresarCotizacion
-		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * 
 	 * @param ruta
 	 */
-	public void crearArchivo(String ruta) {
+	public void crearArchivo(string ruta) {
 		// TODO - implement ManejoArchivo.crearArchivo
 		throw new UnsupportedOperationException();
 	}
@@ -36,8 +24,8 @@ public class ManejoArchivo {
 	 * @param ruta
 	 * @param lineaCotizacion
 	 */
-	public void aÃ±adirCotizacionAlArchivo(String ruta, String lineaCotizacion) {
-		// TODO - implement ManejoArchivo.aï¿½adirCotizacionAlArchivo
+	public void añadirCotizacionAlArchivo(string ruta, string lineaCotizacion) {
+		// TODO - implement ManejoArchivo.añadirCotizacionAlArchivo
 		throw new UnsupportedOperationException();
 	}
 

@@ -1,11 +1,9 @@
-package org.example;
-
-public class Cotizacion {
+public class CotizacionManicura {
 
 	private int cantColores;
 	private int largo;
 	private int material;
-	private int[] diseño;
+	private int[] dise�o;
 	private int[] decoracion;
 	private int valor;
 	private int tiempoEstimado;
@@ -34,12 +32,12 @@ public class Cotizacion {
 		this.material = material;
 	}
 
-	public int[] getDiseño() {
-		return this.diseño;
+	public int[] getDise�o() {
+		return this.dise�o;
 	}
 
-	public void setDiseño(int[] diseño) {
-		this.diseño = diseño;
+	public void setDise�o(int[] dise�o) {
+		this.dise�o = dise�o;
 	}
 
 	public int[] getDecoracion() {
@@ -66,31 +64,6 @@ public class Cotizacion {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public int eleccionMaterial() {
-		// TODO - implement Cotizacion.eleccionMaterial
-		throw new UnsupportedOperationException();
-	}
-
-	public int[] eleccionDiseño() {
-		// TODO - implement Cotizacion.eleccionDiseño
-		throw new UnsupportedOperationException();
-	}
-
-	public int eleccionLargo() {
-		// TODO - implement Cotizacion.eleccionLargo
-		throw new UnsupportedOperationException();
-	}
-
-	public int[] eleccionDecoracion() {
-		// TODO - implement Cotizacion.eleccionDecoracion
-		throw new UnsupportedOperationException();
-	}
-
-	public int eleccionColores() {
-		// TODO - implement Cotizacion.eleccionColores
-		throw new UnsupportedOperationException();
-	}
-
 	public void valorTotal() {
 		// TODO - implement Cotizacion.valorTotal
 		throw new UnsupportedOperationException();
@@ -98,6 +71,20 @@ public class Cotizacion {
 
 	public void tiempoTotal() {
 		// TODO - implement Cotizacion.tiempoTotal
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param cotizacion
+	 */
+	public void guardarCotizacion(CotizacionManicura cotizacion) {
+		// TODO - implement Cotizacion.guardarCotizacion
+		throw new UnsupportedOperationException();
+	}
+
+	public CotizacionManicura() {
+		// TODO - implement Cotizacion.CotizacionManicura
 		throw new UnsupportedOperationException();
 	}
 
