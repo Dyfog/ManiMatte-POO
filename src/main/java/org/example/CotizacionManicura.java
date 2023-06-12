@@ -7,7 +7,7 @@ public class CotizacionManicura {
 	private int material;
 	private int[] diseño;
 	private int[] decoracion;
-	private int valor;
+	private int valorEstimado;
 	private int tiempoEstimado;
 
 	public int getCantColores() {
@@ -50,12 +50,12 @@ public class CotizacionManicura {
 		this.decoracion = decoracion;
 	}
 
-	public int getValor() {
-		return this.valor;
+	public int getValorEstimado() {
+		return this.valorEstimado;
 	}
 
-	public void setValor(int valor) {
-		this.valor = valor;
+	public void setValorEstimado(int valorEstimado) {
+		this.valorEstimado = valorEstimado;
 	}
 
 	public int getTiempoEstimado() {
@@ -66,28 +66,32 @@ public class CotizacionManicura {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public void valorTotal() {
-		// TODO - implement Cotizacion.valorTotal
-		throw new UnsupportedOperationException();
-	}
-
-	public void tiempoTotal() {
-		// TODO - implement Cotizacion.tiempoTotal
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param cotizacion
-	 */
-	public void guardarCotizacion(CotizacionManicura cotizacion) {
-		// TODO - implement Cotizacion.guardarCotizacion
-		throw new UnsupportedOperationException();
+	public int valorTotal() {
+		int valorEstimado = Calculo.calcValorColores(this.cantColores)+Calculo.calcValorDecoracion(this.decoracion)+
+				Calculo.calcValorDiseño(this.diseño)+Calculo.calcValorMaterial(this.material)+
+				Calculo.calcValorLargo(this.largo);
+		return valorEstimado;
 	}
 
 	public CotizacionManicura() {
-		// TODO - implement Cotizacion.CotizacionManicura
-		throw new UnsupportedOperationException();
+		this.cantColores = 1;
+		this.largo = 0;
+		this.material = 0;
+		this.diseño = new int[]{0, 0};
+		this.decoracion = new int[]{0, 0};
+		this.valorEstimado = 14000;
+		this.tiempoEstimado = 70;
 	}
 
+	public int tiempoTotal() {
+		int tiempoEstimado = Calculo.calcTiempoColores(this.cantColores)+Calculo.calcTiempoDecoracion(this.decoracion)+
+							Calculo.calcTiempoDiseño(this.diseño)+Calculo.calcTiempoMaterial(this.material)+
+							Calculo.calcTiempoLargo(this.largo);
+		return tiempoEstimado;
+	}
+
+
+	public void cambiar (){
+		this.valorEstimado = 1000;
+	}
 }
