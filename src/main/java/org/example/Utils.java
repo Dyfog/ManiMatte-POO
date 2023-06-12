@@ -1,10 +1,12 @@
+package org.example;
+
 public class Utils {
 
 	/**
 	 * 
 	 * @param rutaArchivo
 	 */
-	public boolean validarExistenciaArchivo(string rutaArchivo) {
+	public boolean validarExistenciaArchivo(String rutaArchivo) {
 		// TODO - implement Utils.validarExistenciaArchivo
 		throw new UnsupportedOperationException();
 	}

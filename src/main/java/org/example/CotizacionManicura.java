@@ -1,9 +1,11 @@
+package org.example;
+
 public class CotizacionManicura {
 
 	private int cantColores;
 	private int largo;
 	private int material;
-	private int[] diseño;
+	private int[] diseÃ±o;
 	private int[] decoracion;
 	private int valor;
 	private int tiempoEstimado;
@@ -32,12 +34,12 @@ public class CotizacionManicura {
 		this.material = material;
 	}
 
-	public int[] getDiseño() {
-		return this.diseño;
+	public int[] getDiseÃ±o() {
+		return this.diseÃ±o;
 	}
 
-	public void setDiseño(int[] diseño) {
-		this.diseño = diseño;
+	public void setDiseÃ±o(int[] diseÃ±o) {
+		this.diseÃ±o = diseÃ±o;
 	}
 
 	public int[] getDecoracion() {

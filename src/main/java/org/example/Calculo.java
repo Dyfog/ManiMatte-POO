@@ -1,3 +1,5 @@
+package org.example;
+
 public class Calculo {
 
 	public int calcValorMaterial() {
@@ -5,8 +7,8 @@ public class Calculo {
 		throw new UnsupportedOperationException();
 	}
 
-	public int calcValorDiseño() {
-		// TODO - implement Calculo.calcValorDiseño
+	public int calcValorDiseÃ±o() {
+		// TODO - implement Calculo.calcValorDiseï¿½o
 		throw new UnsupportedOperationException();
 	}
 
@@ -30,8 +32,8 @@ public class Calculo {
 		throw new UnsupportedOperationException();
 	}
 
-	public int calcTiempoDiseño() {
-		// TODO - implement Calculo.calcTiempoDiseño
+	public int calcTiempoDiseÃ±o() {
+		// TODO - implement Calculo.calcTiempoDiseï¿½o
 		throw new UnsupportedOperationException();
 	}
 

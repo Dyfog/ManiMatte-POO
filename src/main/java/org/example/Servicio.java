@@ -1,3 +1,5 @@
+package org.example;
+
 public class Servicio {
 
 	public int eleccionMaterial() {
@@ -5,8 +7,8 @@ public class Servicio {
 		throw new UnsupportedOperationException();
 	}
 
-	public int[] eleccionDiseño() {
-		// TODO - implement Servicio.eleccionDiseño
+	public int[] eleccionDiseÃ±o() {
+		// TODO - implement Servicio.eleccionDiseÃ±o
 		throw new UnsupportedOperationException();
 	}
 
