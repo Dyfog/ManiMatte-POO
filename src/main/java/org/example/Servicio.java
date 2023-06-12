@@ -2,71 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Cotizacion {
-
-	private int cantColores;
-	private int largo;
-	private int material;
-	private int[] diseño;
-	private int[] decoracion;
-	private int valor;
-	private int tiempoEstimado;
-
-	public int getCantColores() {
-		return this.cantColores;
-	}
-
-	public void setCantColores(int cantColores) {
-		this.cantColores = cantColores;
-	}
-
-	public int getLargo() {
-		return this.largo;
-	}
-
-	public void setLargo(int largo) {
-		this.largo = largo;
-	}
-
-	public int getMaterial() {
-		return this.material;
-	}
-
-	public void setMaterial(int material) {
-		this.material = material;
-	}
-
-	public int[] getDiseño() {
-		return this.diseño;
-	}
-
-	public void setDiseño(int[] diseño) {
-		this.diseño = diseño;
-	}
-
-	public int[] getDecoracion() {
-		return this.decoracion;
-	}
-
-	public void setDecoracion(int[] decoracion) {
-		this.decoracion = decoracion;
-	}
-
-	public int getValor() {
-		return this.valor;
-	}
-
-	public void setValor(int valor) {
-		this.valor = valor;
-	}
-
-	public int getTiempoEstimado() {
-		return this.tiempoEstimado;
-	}
-
-	public void setTiempoEstimado(int tiempoEstimado) {
-		this.tiempoEstimado = tiempoEstimado;
-	}
+public class Servicio {
 
 	public int eleccionMaterial() {
 
@@ -159,13 +95,26 @@ public class Cotizacion {
 		return cantColores;
 	}
 
-	public void valorTotal() {
-		// TODO - implement Cotizacion.valorTotal
+	public static void guardarCotizacion (CotizacionManicura cotizacion){
+		ManejoArchivo.guardarCotizacion(cotizacion);
+	}
+
+	public void lanzarManicura() {
+		// TODO - implement Servicio.manicura
 		throw new UnsupportedOperationException();
 	}
 
-	public void tiempoTotal() {
-		// TODO - implement Cotizacion.tiempoTotal
-		throw new UnsupportedOperationException();
+	public void opcionesMenu() {
+		System.out.println("Selecciones la opcion que desea realizar");
+		System.out.println("1.-Elegir Colores");
+		System.out.println("2.-Elegir Largo");
+		System.out.println("3.-Elegir Material");
+		System.out.println("4.-Elegir Diseños");
+		System.out.println("5.-Elegir Decoraciones");
+		System.out.println("6.-Calcular Valor");
+		System.out.println("7.-Calcular Tiempo Estimado");
+		System.out.println("8.Finalizar cotizacion");
+		System.out.println("9.-Salir del programa\n");
 	}
+
 }

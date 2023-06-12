@@ -21,13 +21,6 @@ public class Utils {
 		// TODO - implement Utils.validarEntero
 		throw new UnsupportedOperationException();
 	}
-
-	/**
-	 * 
-	 * @param num
-	 * @param min
-	 * @param max
-	 */
 	public static boolean validarRango(int num, int min, int max) {
 
 		if (num < min || num > max) {
@@ -37,7 +30,6 @@ public class Utils {
 	}
 
 	public static int ingresarSoloEntero() {
-
 		Scanner in = new Scanner(System.in);
 		while (!in.hasNextInt()) {
 			System.out.println("Entrada no válida. Ingrese un número entero:");
@@ -46,4 +38,5 @@ public class Utils {
 		int numero = in.nextInt();
 		return numero;
 	}
+
 }

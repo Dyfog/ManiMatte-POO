@@ -2,7 +2,7 @@ package org.example;
 
 public class Calculo {
 
-	public int calcValorMaterial(int eleccionMaterial) {
+	public static int calcValorMaterial(int eleccionMaterial) {
 		int valorMaterial;
 		switch (eleccionMaterial){
 			case 0:
@@ -17,13 +17,13 @@ public class Calculo {
 		return valorMaterial;
 	}
 
-	public int calcValorDiseño(int [] diseños) {
+	public static int calcValorDiseño(int [] diseños) {
 
 		int valor = ((diseños[0] * 500) + (diseños[1] * 1200));
 		return valor;
 	}
 
-	public int calcValorLargo(int eleccionLargo) {
+	public static int calcValorLargo(int eleccionLargo) {
 		int valorLargo;
 		switch (eleccionLargo){
 			case 0:
@@ -40,13 +40,13 @@ public class Calculo {
 		return valorLargo;
 	}
 
-	public int calcValorDecoracion(int [] decoraciones) {
+	public static int calcValorDecoracion(int [] decoraciones) {
 
 		int valor = (decoraciones[0]*600)+(decoraciones[1]*1500);
 		return valor;
 	}
 
-	public int calcValorColores(int cantColores) {
+	public static int calcValorColores(int cantColores) {
 		int valorColores = 0;
 		if (Utils.validarRango(cantColores,0,2)) {
 			valorColores = 8000;
@@ -56,7 +56,7 @@ public class Calculo {
 		return valorColores;
 	}
 
-	public int calcTiempoMaterial(int eleccionMaterial) {
+	public static int calcTiempoMaterial(int eleccionMaterial) {
 		int minutos;
 		switch (eleccionMaterial){
 			case 0:
@@ -71,13 +71,13 @@ public class Calculo {
 		return minutos;
 	}
 
-	public int calcTiempoDiseño(int [] diseños) {
+	public static int calcTiempoDiseño(int [] diseños) {
 
 		int minutos = ((diseños[0] * 3) + (diseños[1] * 7));
 		return minutos;
 	}
 
-	public int calcTiempoLargo(int eleccionLargo) {
+	public static int calcTiempoLargo(int eleccionLargo) {
 		int minutos;
 		switch (eleccionLargo){
 			case 0:
@@ -94,13 +94,13 @@ public class Calculo {
 		return minutos;
 	}
 
-	public int calcTiempoDecoracion(int [] decoraciones) {
+	public static int calcTiempoDecoracion(int [] decoraciones) {
 
 		int minutos = (decoraciones[0]*4)+(decoraciones[1]*6);
 		return minutos;
 	}
 
-	public int calcTiempoColores(int cantColores) {
+	public static int calcTiempoColores(int cantColores) {
 
 		if (Utils.validarRango(cantColores,0,2)) {
 			return 20;
@@ -108,4 +108,5 @@ public class Calculo {
 			return 30;
 		}
 	}
+
 }
