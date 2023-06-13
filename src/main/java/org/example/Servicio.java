@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.Scanner;
 
 public class Servicio {
@@ -12,9 +11,10 @@ public class Servicio {
 		System.out.println("[2] GelX");
 		int eleccion=Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(eleccion,0,2)) {
-			System.out.println("valor ingresado no valido, ingrese nuevamente");
+			System.out.println("valor ingresado no valido, ingrese una opción nuevamente");
 			eleccion = Utils.ingresarSoloEntero();
 		}
+		System.out.println("Elección ingresada");
 		return eleccion;
 	}
 
@@ -34,12 +34,13 @@ public class Servicio {
 		System.out.println("Ingrese la cantidad de diseños sofisticados: ");
 		int cantSofisticados = Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(cantSofisticados,0,10-cantSimples)){
-			System.out.println("El numero ingresado no es valido");
+			System.out.println("El numero ingresado no es valido, respete la cantidad máxima");
 			cantSofisticados = Utils.ingresarSoloEntero();
 		}
 
 		elecciones[0]= cantSimples;
 		elecciones[1]= cantSofisticados;
+		System.out.println("Cantidades ingresadas");
 		return elecciones;
 	}
 
@@ -52,9 +53,10 @@ public class Servicio {
 		System.out.println("3.- L");
 		int eleccion = Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(eleccion,0,3)) {
-			System.out.println("valor ingresado no valido, ingrese nuevamente");
+			System.out.println("Valor ingresado no valido, ingrese una opción nuevamente");
 			eleccion = Utils.ingresarSoloEntero();
 		}
+		System.out.println("Elección ingresada");
 		return eleccion;
 	}
 
@@ -74,12 +76,13 @@ public class Servicio {
 		System.out.println("Ingrese la cantidad de accesorios 3D: ");
 		int cantAccesorios3D = Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(cantAccesorios3D,0,10-cantCristales)){
-			System.out.println("El numero ingresado no es valido");
+			System.out.println("El numero ingresado no es valido, respete la cantidad máxima");
 			cantAccesorios3D = Utils.ingresarSoloEntero();
 		}
 
 		elecciones[0]= cantCristales;
 		elecciones[1]= cantAccesorios3D;
+		System.out.println("Cantidades ingresadas");
 		return elecciones;
 	}
 
@@ -88,9 +91,10 @@ public class Servicio {
 		System.out.println("ingrese la cantidad de colores que desea: ");
 		int cantColores = Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(cantColores,0,5)){
-			System.out.println("valor ingresado no valido, ingrese nuevamente");
+			System.out.println("valor ingresado no valido, el máximo es 5, ingrese nuevamente");
 			cantColores = Utils.ingresarSoloEntero();
 		}
+		System.out.println("Cantidad ingresada");
 		return cantColores;
 	}
 
@@ -105,7 +109,7 @@ public class Servicio {
 			opcionesMenu();
 			int eleccion = Utils.ingresarSoloEntero();
 			while (!Utils.validarRango(eleccion,1,9)){
-				System.out.println("Ingrese una opcion válida");
+				System.out.println("Ingrese una acción válida");
 				eleccion = Utils.ingresarSoloEntero();
 			}
 			switch (eleccion){
@@ -126,20 +130,20 @@ public class Servicio {
 					break;
 				case 6:
 					cotizacion.setValorEstimado(cotizacion.valorTotal());
-					System.out.println(cotizacion.getValorEstimado());
+					System.out.println("El valor total es: $"+cotizacion.getValorEstimado());
 					break;
 				case 7:
 					cotizacion.setTiempoEstimado(cotizacion.tiempoTotal());
-					System.out.println(cotizacion.getTiempoEstimado());
+					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado());
 					break;
 				case 8:
-
-					//Revisar esta wea, si es q lw se vacía
+					//Falta la parte de guardar cotización
 					cotizacion = null;
 					cotizacion = new CotizacionManicura();
 
 					break;
 				case 9:
+					//Falta la parte de guardar cotización (¿ no es engorroso q haya q guardarla y dsp cerrar el programa?
 					manternerProgrmaActivo = false;
 					break;
 			}
