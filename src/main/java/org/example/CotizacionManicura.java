@@ -89,9 +89,4 @@ public class CotizacionManicura {
 							Calculo.calcTiempoLargo(this.largo);
 		return tiempoEstimado;
 	}
-
-
-	public void cambiar (){
-		this.valorEstimado = 1000;
-	}
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Servicio {
 
-	public int eleccionMaterial() {
+	public static int eleccionMaterial() {
 
 		System.out.println("Ingrese el número que corresponda a su elección: ");
 		System.out.println("[0] Acrílico");
@@ -18,7 +18,7 @@ public class Servicio {
 		return eleccion;
 	}
 
-	public int[] eleccionDiseño() {
+	public static int[] eleccionDiseño() {
 
 		int[] elecciones =new int[2];
 		System.out.println("Eliga los diseños, son 1 por cada uña, maximo 10");
@@ -43,7 +43,7 @@ public class Servicio {
 		return elecciones;
 	}
 
-	public int eleccionLargo() {
+	public static int eleccionLargo() {
 
 		System.out.println("ingrese el largo de uña que desea");
 		System.out.println("0.- Natural");
@@ -58,7 +58,7 @@ public class Servicio {
 		return eleccion;
 	}
 
-	public int[] eleccionDecoracion() {
+	public static int[] eleccionDecoracion() {
 
 		int[] elecciones =new int[2];
 		System.out.println("Eliga las decoraciones, puede optar por cristales y/o accesorios 3D, son 1 por cada uña, maximo 10");
@@ -83,9 +83,8 @@ public class Servicio {
 		return elecciones;
 	}
 
-	public int eleccionColores() {
+	public static int eleccionColores() {
 
-		Scanner teclado = new Scanner(System.in);
 		System.out.println("ingrese la cantidad de colores que desea: ");
 		int cantColores = Utils.ingresarSoloEntero();
 		while (!Utils.validarRango(cantColores,0,5)){
@@ -99,12 +98,55 @@ public class Servicio {
 		ManejoArchivo.guardarCotizacion(cotizacion);
 	}
 
-	public void lanzarManicura() {
-		// TODO - implement Servicio.manicura
-		throw new UnsupportedOperationException();
+	public static void lanzarManicura() {
+		boolean manternerProgrmaActivo = true;
+		CotizacionManicura cotizacion = new CotizacionManicura();
+		while (manternerProgrmaActivo) {
+			opcionesMenu();
+			int eleccion = Utils.ingresarSoloEntero();
+			while (!Utils.validarRango(eleccion,1,9)){
+				System.out.println("Ingrese una opcion válida");
+				eleccion = Utils.ingresarSoloEntero();
+			}
+			switch (eleccion){
+				case 1:
+					cotizacion.setCantColores(eleccionColores());
+					break;
+				case 2:
+					cotizacion.setLargo(eleccionLargo());
+					break;
+				case 3:
+					cotizacion.setMaterial(eleccionMaterial());
+					break;
+				case 4:
+					cotizacion.setDiseño(eleccionDiseño());
+					break;
+				case 5:
+					cotizacion.setDecoracion(eleccionDecoracion());
+					break;
+				case 6:
+					cotizacion.setValorEstimado(cotizacion.valorTotal());
+					System.out.println(cotizacion.getValorEstimado());
+					break;
+				case 7:
+					cotizacion.setTiempoEstimado(cotizacion.tiempoTotal());
+					System.out.println(cotizacion.getTiempoEstimado());
+					break;
+				case 8:
+
+					//Revisar esta wea, si es q lw se vacía
+					cotizacion = null;
+					cotizacion = new CotizacionManicura();
+
+					break;
+				case 9:
+					manternerProgrmaActivo = false;
+					break;
+			}
+		}
 	}
 
-	public void opcionesMenu() {
+	public static void opcionesMenu() {
 		System.out.println("Selecciones la opcion que desea realizar");
 		System.out.println("1.-Elegir Colores");
 		System.out.println("2.-Elegir Largo");
@@ -116,5 +158,4 @@ public class Servicio {
 		System.out.println("8.Finalizar cotizacion");
 		System.out.println("9.-Salir del programa\n");
 	}
-
 }
