@@ -1,18 +1,9 @@
 package org.example;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Utils {
-
-	/**
-	 * 
-	 * @param rutaArchivo
-	 */
-	public boolean validarExistenciaArchivo(String rutaArchivo) {
-		// TODO - implement Utils.validarExistenciaArchivo
-		throw new UnsupportedOperationException();
-	}
-
 	/**
 	 * 
 	 * @param num
