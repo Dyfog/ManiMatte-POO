@@ -7,10 +7,13 @@ public class Calculo {
 		switch (eleccionMaterial){
 			case 0:
 				valorMaterial = 6000;
+				break;
 			case 1:
 				valorMaterial = 5000;
+				break;
 			case 2:
 				valorMaterial = 4000;
+				break;
 			default:
 				valorMaterial = 0;
 		}
@@ -28,12 +31,16 @@ public class Calculo {
 		switch (eleccionLargo){
 			case 0:
 				valorLargo = 0;
+				break;
 			case 1:
 				valorLargo = 5000;
+				break;
 			case 2:
 				valorLargo = 7000;
+				break;
 			case 3:
 				valorLargo = 9000;
+				break;
 			default:
 				valorLargo = 0;
 		}
@@ -61,10 +68,13 @@ public class Calculo {
 		switch (eleccionMaterial){
 			case 0:
 				minutos = 50;
+				break;
 			case 1:
 				minutos = 30;
+				break;
 			case 2:
 				minutos = 15;
+				break;
 			default:
 				minutos = 0;
 		}
@@ -82,12 +92,16 @@ public class Calculo {
 		switch (eleccionLargo){
 			case 0:
 				minutos = 0;
+				break;
 			case 1:
 				minutos = 20;
+				break;
 			case 2:
 				minutos = 25;
+				break;
 			case 3:
 				minutos = 30;
+				break;
 			default:
 				minutos = 0;
 		}
