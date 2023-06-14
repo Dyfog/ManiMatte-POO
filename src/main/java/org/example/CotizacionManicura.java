@@ -7,7 +7,7 @@ public class CotizacionManicura {
 	private int material;
 	private int[] diseño;
 	private int[] decoracion;
-	private int valorEstimado;
+	private float valorEstimado;
 	private int tiempoEstimado;
 
 	public int getCantColores() {
@@ -50,11 +50,11 @@ public class CotizacionManicura {
 		this.decoracion = decoracion;
 	}
 
-	public int getValorEstimado() {
+	public float getValorEstimado() {
 		return this.valorEstimado;
 	}
 
-	public void setValorEstimado(int valorEstimado) {
+	public void setValorEstimado(float valorEstimado) {
 		this.valorEstimado = valorEstimado;
 	}
 
@@ -66,11 +66,15 @@ public class CotizacionManicura {
 		this.tiempoEstimado = tiempoEstimado;
 	}
 
-	public int valorTotal() {
-		int valorEstimado = Calculo.calcValorColores(this.cantColores)+Calculo.calcValorDecoracion(this.decoracion)+
+	public float valorTotal() {
+		float valorEstimado = Calculo.calcValorColores(this.cantColores)+Calculo.calcValorDecoracion(this.decoracion)+
 				Calculo.calcValorDiseño(this.diseño)+Calculo.calcValorMaterial(this.material)+
 				Calculo.calcValorLargo(this.largo);
 		return valorEstimado;
+	}
+
+	public float iva(){
+		return (float) (this.valorEstimado*0.19);
 	}
 
 	public CotizacionManicura() {

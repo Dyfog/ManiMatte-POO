@@ -129,21 +129,20 @@ public class Servicio {
 					cotizacion.setDecoracion(eleccionDecoracion());
 					break;
 				case 6:
-					cotizacion.setValorEstimado(cotizacion.valorTotal());
-					System.out.println("El valor total es: $"+cotizacion.getValorEstimado());
+					cotizacion.setValorEstimado(cotizacion.valorTotal()+Math.round(cotizacion.iva()));
+					System.out.println("El valor total es: $"+cotizacion.getValorEstimado()+" pesos");
 					break;
 				case 7:
 					cotizacion.setTiempoEstimado(cotizacion.tiempoTotal());
 					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado());
 					break;
 				case 8:
-					//Falta la parte de guardar cotización
+					//Guardar
 					cotizacion = null;
 					cotizacion = new CotizacionManicura();
-
+					System.out.println("Se ha guardado la cotización, iniciando una nueva");
 					break;
 				case 9:
-					//Falta la parte de guardar cotización (¿ no es engorroso q haya q guardarla y dsp cerrar el programa?
 					manternerProgrmaActivo = false;
 					break;
 			}
@@ -159,7 +158,7 @@ public class Servicio {
 		System.out.println("5.-Elegir Decoraciones");
 		System.out.println("6.-Calcular Valor");
 		System.out.println("7.-Calcular Tiempo Estimado");
-		System.out.println("8.Finalizar cotizacion");
+		System.out.println("8.Finalizar y guardar cotizacion");
 		System.out.println("9.-Salir del programa\n");
 	}
 }
