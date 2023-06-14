@@ -134,7 +134,7 @@ public class Servicio {
 					break;
 				case 7:
 					cotizacion.setTiempoEstimado(cotizacion.tiempoTotal());
-					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado());
+					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado()+" mins");
 					break;
 				case 8:
 					ManejoArchivo.guardarCotizacion(cotizacion);
