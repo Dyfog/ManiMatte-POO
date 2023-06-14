@@ -137,7 +137,7 @@ public class Servicio {
 					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado());
 					break;
 				case 8:
-					//Guardar
+					ManejoArchivo.guardarCotizacion(cotizacion);
 					cotizacion = null;
 					cotizacion = new CotizacionManicura();
 					System.out.println("Se ha guardado la cotización, iniciando una nueva");
