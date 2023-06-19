@@ -55,7 +55,7 @@ public class Calculo {
 
 	public static int calcValorColores(int cantColores) {
 		int valorColores = 0;
-		if (Utils.validarRango(cantColores,0,2)) {
+		if (Util.validarRango(cantColores,0,2)) {
 			valorColores = 8000;
 		}else  {
 			valorColores = 9000;
@@ -116,7 +116,7 @@ public class Calculo {
 
 	public static int calcTiempoColores(int cantColores) {
 
-		if (Utils.validarRango(cantColores,0,2)) {
+		if (Util.validarRango(cantColores,0,2)) {
 			return 20;
 		}else  {
 			return 30;

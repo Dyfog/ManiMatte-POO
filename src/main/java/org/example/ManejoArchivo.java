@@ -10,7 +10,7 @@ public class ManejoArchivo {
 	private static String ruta = "archivoCotizaciones.txt";
 
 
-	public static String crearLineaCotizacion(CotizacionManicura cotizacion) {
+	private static String crearLineaCotizacion(CotizacionManicura cotizacion) {
 		String largo;
 		String material;
 		if (cotizacion.getLargo()==0){
@@ -40,7 +40,7 @@ public class ManejoArchivo {
 	}
 
 
-	public static void crearArchivo() {
+	private static void crearArchivo() {
 		File archivo = new File(ruta);
 		try {
 			boolean creado = archivo.createNewFile();
@@ -55,7 +55,7 @@ public class ManejoArchivo {
 	}
 
 
-	public static void añadirCotizacionAlArchivo(String lineaCotizacion) {
+	private static void añadirCotizacionAlArchivo(String lineaCotizacion) {
 		try {
 			FileWriter fileWriter = new FileWriter(ruta, true); // El segundo parámetro "true" indica que se añadirá al final del archivo
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -80,7 +80,7 @@ public class ManejoArchivo {
 	}
 
 
-	public static boolean validarExistenciaArchivo() {
+	private static boolean validarExistenciaArchivo() {
 		File file = new File(ruta);
 		return file.exists();
 	}
