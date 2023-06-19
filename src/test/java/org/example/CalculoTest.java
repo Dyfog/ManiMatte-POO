@@ -72,10 +72,10 @@ class CalculoTest {
         assertEquals(4000,Calculo.calcValorMaterial(material3));
     }
     @Test
-    void calculoDiseñoTest(){
-        assertEquals(8500,Calculo.calcValorDiseño(arregloTesting1));
-        assertEquals(5000,Calculo.calcValorDiseño(arregloTesting2));
-        assertEquals(0,Calculo.calcValorDiseño(arregloTesting3));
+    void calculoDiseÃ±oTest(){
+        assertEquals(8500,Calculo.calcValorDiseÃ±o(arregloTesting1));
+        assertEquals(5000,Calculo.calcValorDiseÃ±o(arregloTesting2));
+        assertEquals(0,Calculo.calcValorDiseÃ±o(arregloTesting3));
     }
     @Test
     void calculoDecoracionTest(){
@@ -104,10 +104,10 @@ class CalculoTest {
     }
 
     @Test
-    void calcTiempoDiseño(){
-        assertEquals(50,Calculo.calcTiempoDiseño(arregloTesting1));
-        assertEquals(30,Calculo.calcTiempoDiseño(arregloTesting2));
-        assertEquals(0,Calculo.calcTiempoDiseño(arregloTesting3));
+    void calcTiempoDiseÃ±o(){
+        assertEquals(50,Calculo.calcTiempoDiseÃ±o(arregloTesting1));
+        assertEquals(30,Calculo.calcTiempoDiseÃ±o(arregloTesting2));
+        assertEquals(0,Calculo.calcTiempoDiseÃ±o(arregloTesting3));
     }
 
     @Test
