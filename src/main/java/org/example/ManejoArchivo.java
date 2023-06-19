@@ -1,44 +1,87 @@
 package org.example;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class ManejoArchivo {
 
-	private String ruta;
+	private static String ruta = "archivoCotizaciones.txt";
 
-	/**
-	 * 
-	 * @param objeto
-	 */
-	public String crearLineaCotizacion(Object objeto) {
-		// TODO - implement ManejoArchivo.crearLineaCotizacion
-		throw new UnsupportedOperationException();
+
+	private static String crearLineaCotizacion(CotizacionManicura cotizacion) {
+		String largo;
+		String material;
+		if (cotizacion.getLargo()==0){
+			largo = "Natural";
+		} else if (cotizacion.getLargo()==1) {
+			largo = "S";
+		} else if (cotizacion.getLargo()==2) {
+			largo = "M";
+		} else {
+			largo = "L";
+		}
+
+		if (cotizacion.getMaterial()==0){
+			material = "Acrilico";
+		} else if (cotizacion.getMaterial()==1) {
+			material = "PolyGel";
+		}else {
+			material = "GelX";
+		}
+		//falta el tiempo y valor de la cotizacion
+		String linea = "Cantidad de colores: "+String.valueOf(cotizacion.getCantColores())+", Largo de la uña: "+largo
+				+", Material: "+material+", Decoraciones simples: "+cotizacion.getDecoracion()[0]
+				+", Decoraciones sofisticadas: "+cotizacion.getDecoracion()[1]+", Diseños en cristales: "
+				+cotizacion.getDiseño()[0]+", Diseños 3D: "+cotizacion.getDiseño()[1]+", Tiempo estimado: "
+				+cotizacion.getTiempoEstimado()+" mins"+", Valor total: "+cotizacion.getValorEstimado()+" pesos"+" || ";
+		return linea;
 	}
 
-	/**
-	 * 
-	 * @param objetoCotizacion
-	 */
-	public void ingresarCotizacion(Object objetoCotizacion) {
-		// TODO - implement ManejoArchivo.ingresarCotizacion
-		throw new UnsupportedOperationException();
+
+	private static void crearArchivo() {
+		File archivo = new File(ruta);
+		try {
+			boolean creado = archivo.createNewFile();
+			if (creado) {
+				System.out.println("El archivo se ha creado correctamente.");
+			} else {
+				System.out.println("El archivo ya existe en la ruta especificada.");
+			}
+		} catch (IOException e) {
+			System.out.println("Se produjo un error al crear el archivo: " + e.getMessage());
+		}
 	}
 
-	/**
-	 * 
-	 * @param ruta
-	 */
-	public void crearArchivo(String ruta) {
-		// TODO - implement ManejoArchivo.crearArchivo
-		throw new UnsupportedOperationException();
+
+	private static void añadirCotizacionAlArchivo(String lineaCotizacion) {
+		try {
+			FileWriter fileWriter = new FileWriter(ruta, true); // El segundo parámetro "true" indica que se añadirá al final del archivo
+			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+			bufferedWriter.write(lineaCotizacion);
+			bufferedWriter.newLine();
+
+			bufferedWriter.close();
+
+			System.out.println("Se agregó la línea al archivo correctamente.");
+		} catch (IOException e) {
+			System.out.println("Se produjo un error al agregar la línea al archivo: " + e.getMessage());
+		}
 	}
 
-	/**
-	 * 
-	 * @param ruta
-	 * @param lineaCotizacion
-	 */
-	public void añadirCotizacionAlArchivo(String ruta, String lineaCotizacion) {
-		// TODO - implement ManejoArchivo.a�adirCotizacionAlArchivo
-		throw new UnsupportedOperationException();
+	public static void guardarCotizacion(CotizacionManicura cotizacion){
+		if(!validarExistenciaArchivo()){
+			crearArchivo();
+		}
+		String lineaCotizacion = crearLineaCotizacion(cotizacion);
+		añadirCotizacionAlArchivo(lineaCotizacion);
 	}
 
+
+	private static boolean validarExistenciaArchivo() {
+		File file = new File(ruta);
+		return file.exists();
+	}
 }
