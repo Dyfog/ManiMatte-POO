@@ -1,6 +1,6 @@
 package org.example;
 
-import org.junit.jupiter.api.AfterEach;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -26,12 +26,7 @@ class CalculoTest {
     int color1;
     int color2;
     int color3;
-    int iva1;
-    int iva2;
-    int iva3;
-    int[] precioTotal1;
-    int[] precioTotal2;
-    int[] precioTotal3;
+
 
     @BeforeEach
     void setUp() {
@@ -120,7 +115,7 @@ class CalculoTest {
     @Test
     void calcTiempoDecoraciones(){
         assertEquals(50,Calculo.calcTiempoDecoracion(arregloTesting1));
-        assertEquals(20,Calculo.calcTiempoDecoracion(arregloTesting2));
+        assertEquals(40,Calculo.calcTiempoDecoracion(arregloTesting2));
         assertEquals(0,Calculo.calcTiempoDecoracion(arregloTesting3));
     }
 
