@@ -1,6 +1,6 @@
-package org.example.GUIs;
+package org.example.guis;
 
-import org.example.CotizacionManicura;
+import org.example.modelo.CotizacionManicura;
 
 import javax.swing.*;
 import java.util.HashMap;

@@ -1,6 +1,6 @@
-package org.example.Launcher;
+package org.example.launcher;
 
-import org.example.GUIs.Controlador;
+import org.example.guis.Controlador;
 
 public class Main {
     public static void main(String[] args) {

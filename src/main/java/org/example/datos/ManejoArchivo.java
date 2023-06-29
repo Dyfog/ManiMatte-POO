@@ -1,4 +1,6 @@
-package org.example;
+package org.example.datos;
+
+import org.example.modelo.CotizacionManicura;
 
 import java.io.BufferedWriter;
 import java.io.File;

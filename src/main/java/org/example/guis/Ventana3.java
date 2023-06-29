@@ -1,6 +1,4 @@
-package org.example.GUIs;
-
-import org.example.CotizacionManicura;
+package org.example.guis;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.modelo;
+
+import org.example.util.Util;
 
 public class Calculo {
 

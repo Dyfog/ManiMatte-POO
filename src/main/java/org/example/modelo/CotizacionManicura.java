@@ -1,4 +1,6 @@
-package org.example;
+package org.example.modelo;
+
+import org.example.modelo.Calculo;
 
 public class CotizacionManicura {
 

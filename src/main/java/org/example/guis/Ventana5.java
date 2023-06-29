@@ -1,6 +1,6 @@
-package org.example.GUIs;
+package org.example.guis;
 
-import org.example.ManejoArchivo;
+import org.example.datos.ManejoArchivo;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
