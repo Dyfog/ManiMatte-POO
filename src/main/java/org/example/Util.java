@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Utils {
+public class Util {
 	
 	public static boolean validarRango(int num, int min, int max) {
 

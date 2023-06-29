@@ -2,6 +2,12 @@ package org.example;
 
 public class Calculo {
 
+	/**
+	 * Este metodo hace el calculo del valor del material elegido dependiendo eleccion hecha.
+	 *
+	 * @param eleccionMaterial Largo elegido del material, los valores van del 0 al 2, cada uno representando un material en especifico.
+	 * @return El valor calculado del material elegido.
+	 */
 	public static int calcValorMaterial(int eleccionMaterial) {
 		int valorMaterial;
 		switch (eleccionMaterial){
@@ -20,12 +26,24 @@ public class Calculo {
 		return valorMaterial;
 	}
 
+	/**
+	 * Este metodo hace el calculo del valor del los diseños elegidos dependiendo eleccion hecha.
+	 *
+	 * @param diseños Arreglo de 2 elementos con la cantidad de diseños simples y sofisticados, la suma de ellos no puede superar el valor 10.
+	 * @return El valor calculado de el conjunto de los diseños elegidos.
+	 */
 	public static int calcValorDiseño(int [] diseños) {
 
 		int valor = ((diseños[0] * 500) + (diseños[1] * 1200));
 		return valor;
 	}
 
+	/**
+	 * Este metodo hace el calculo del valor del largo dependiendo de la eleccion hecha.
+	 *
+	 * @param eleccionLargo Valor asigando para el largo elegido, va de 0 a 3.
+	 * @return El valor calculado del largo elegido.
+	 */
 	public static int calcValorLargo(int eleccionLargo) {
 		int valorLargo;
 		switch (eleccionLargo){
@@ -47,15 +65,22 @@ public class Calculo {
 		return valorLargo;
 	}
 
+	/**
+	 * Este metodo hace el calculo del valor de las decoraciones dependiendo de la eleccion hecha.
+	 *
+	 * @param decoraciones Arreglo de 2 posiciones con la cantidad de decoraciones, cirstales y decoraciones 3d respectivamente, la suma de ellos no puede superar el valor 10.
+	 * @return El valor calculado de el conjunto de los decoraciones elegidas.
+	 */
 	public static int calcValorDecoracion(int [] decoraciones) {
 
 		int valor = (decoraciones[0]*600)+(decoraciones[1]*1500);
 		return valor;
 	}
 
+
 	public static int calcValorColores(int cantColores) {
 		int valorColores = 0;
-		if (Utils.validarRango(cantColores,0,2)) {
+		if (Util.validarRango(cantColores,0,2)) {
 			valorColores = 8000;
 		}else  {
 			valorColores = 9000;
@@ -116,7 +141,7 @@ public class Calculo {
 
 	public static int calcTiempoColores(int cantColores) {
 
-		if (Utils.validarRango(cantColores,0,2)) {
+		if (Util.validarRango(cantColores,0,2)) {
 			return 20;
 		}else  {
 			return 30;

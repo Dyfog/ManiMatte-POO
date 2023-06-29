@@ -1,5 +1,4 @@
 package org.example;
-import java.util.Scanner;
 
 public class Servicio {
 
@@ -9,10 +8,10 @@ public class Servicio {
 		System.out.println("[0] Acrílico");
 		System.out.println("[1] PolyGel");
 		System.out.println("[2] GelX");
-		int eleccion=Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(eleccion,0,2)) {
+		int eleccion= Util.ingresarSoloEntero();
+		while (!Util.validarRango(eleccion,0,2)) {
 			System.out.println("valor ingresado no valido, ingrese una opción nuevamente");
-			eleccion = Utils.ingresarSoloEntero();
+			eleccion = Util.ingresarSoloEntero();
 		}
 		System.out.println("Elección ingresada");
 		return eleccion;
@@ -25,17 +24,17 @@ public class Servicio {
 		System.out.println("En caso de no querer diseños, ingrese 0 cuando se le pida la cantidad");
 
 		System.out.println("Ingrese la cantidad de diseños simples: ");
-		int cantSimples =Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(cantSimples,0,10)) {
+		int cantSimples = Util.ingresarSoloEntero();
+		while (!Util.validarRango(cantSimples,0,10)) {
 			System.out.println("Ingrese un número menor a 11");
-			cantSimples = Utils.ingresarSoloEntero();
+			cantSimples = Util.ingresarSoloEntero();
 		}
 
 		System.out.println("Ingrese la cantidad de diseños sofisticados: ");
-		int cantSofisticados = Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(cantSofisticados,0,10-cantSimples)){
+		int cantSofisticados = Util.ingresarSoloEntero();
+		while (!Util.validarRango(cantSofisticados,0,10-cantSimples)){
 			System.out.println("El numero ingresado no es valido, respete la cantidad máxima");
-			cantSofisticados = Utils.ingresarSoloEntero();
+			cantSofisticados = Util.ingresarSoloEntero();
 		}
 
 		elecciones[0]= cantSimples;
@@ -51,10 +50,10 @@ public class Servicio {
 		System.out.println("1.- S");
 		System.out.println("2.- M");
 		System.out.println("3.- L");
-		int eleccion = Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(eleccion,0,3)) {
+		int eleccion = Util.ingresarSoloEntero();
+		while (!Util.validarRango(eleccion,0,3)) {
 			System.out.println("Valor ingresado no valido, ingrese una opción nuevamente");
-			eleccion = Utils.ingresarSoloEntero();
+			eleccion = Util.ingresarSoloEntero();
 		}
 		System.out.println("Elección ingresada");
 		return eleccion;
@@ -67,17 +66,17 @@ public class Servicio {
 		System.out.println("En caso de no querer accesorios, ingrese 0 cuando se le pida la cantidad");
 
 		System.out.println("Ingrese la cantidad de cristales: ");
-		int cantCristales = Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(cantCristales,0,10)) {
+		int cantCristales = Util.ingresarSoloEntero();
+		while (!Util.validarRango(cantCristales,0,10)) {
 			System.out.println("Ingrese un número menor a 11");
-			cantCristales = Utils.ingresarSoloEntero();
+			cantCristales = Util.ingresarSoloEntero();
 		}
 
 		System.out.println("Ingrese la cantidad de accesorios 3D: ");
-		int cantAccesorios3D = Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(cantAccesorios3D,0,10-cantCristales)){
+		int cantAccesorios3D = Util.ingresarSoloEntero();
+		while (!Util.validarRango(cantAccesorios3D,0,10-cantCristales)){
 			System.out.println("El numero ingresado no es valido, respete la cantidad máxima");
-			cantAccesorios3D = Utils.ingresarSoloEntero();
+			cantAccesorios3D = Util.ingresarSoloEntero();
 		}
 
 		elecciones[0]= cantCristales;
@@ -89,10 +88,10 @@ public class Servicio {
 	public static int eleccionColores() {
 
 		System.out.println("ingrese la cantidad de colores que desea: ");
-		int cantColores = Utils.ingresarSoloEntero();
-		while (!Utils.validarRango(cantColores,0,5)){
+		int cantColores = Util.ingresarSoloEntero();
+		while (!Util.validarRango(cantColores,0,5)){
 			System.out.println("valor ingresado no valido, el máximo es 5, ingrese nuevamente");
-			cantColores = Utils.ingresarSoloEntero();
+			cantColores = Util.ingresarSoloEntero();
 		}
 		System.out.println("Cantidad ingresada");
 		return cantColores;
@@ -107,10 +106,10 @@ public class Servicio {
 		CotizacionManicura cotizacion = new CotizacionManicura();
 		while (manternerProgrmaActivo) {
 			opcionesMenu();
-			int eleccion = Utils.ingresarSoloEntero();
-			while (!Utils.validarRango(eleccion,1,9)){
+			int eleccion = Util.ingresarSoloEntero();
+			while (!Util.validarRango(eleccion,1,9)){
 				System.out.println("Ingrese una acción válida");
-				eleccion = Utils.ingresarSoloEntero();
+				eleccion = Util.ingresarSoloEntero();
 			}
 			switch (eleccion){
 				case 1:
@@ -134,10 +133,10 @@ public class Servicio {
 					break;
 				case 7:
 					cotizacion.setTiempoEstimado(cotizacion.tiempoTotal());
-					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado());
+					System.out.println("El tiempo estimado del servico completo es de: "+cotizacion.getTiempoEstimado()+" mins");
 					break;
 				case 8:
-					ManejoArchivo.guardarCotizacion(cotizacion);
+					guardarCotizacion(cotizacion);
 					cotizacion = null;
 					cotizacion = new CotizacionManicura();
 					System.out.println("Se ha guardado la cotización, iniciando una nueva");
