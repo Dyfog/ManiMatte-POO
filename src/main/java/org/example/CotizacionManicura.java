@@ -87,6 +87,17 @@ public class CotizacionManicura {
 		this.tiempoEstimado = 70;
 	}
 
+	public CotizacionManicura(int cantColores, int largo, int material,int diseño[], int[] decoracion) {
+		this.cantColores = cantColores;
+		this.largo = largo;
+		this.material = material;
+		this.diseño = diseño;
+		this.decoracion = decoracion;
+		this.valorEstimado = valorTotal();
+		this.tiempoEstimado = tiempoTotal();
+
+	}
+
 	public int tiempoTotal() {
 		int tiempoEstimado = Calculo.calcTiempoColores(this.cantColores)+Calculo.calcTiempoDecoracion(this.decoracion)+
 							Calculo.calcTiempoDiseño(this.diseño)+Calculo.calcTiempoMaterial(this.material)+
