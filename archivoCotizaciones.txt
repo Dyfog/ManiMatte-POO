@@ -3,3 +3,4 @@ Cantidad de colores: 2, Largo de la uña: Natural, Material: PolyGel, Decoracione
 Cantidad de colores: 2, Largo de la uña: Natural, Material: Acrilico, Decoraciones simples: 1, Decoraciones sofisticadas: 3, Diseños en cristales: 3, Diseños 3D: 5, Tiempo estimado: 136 mins, Valor total: 26600.0 pesos || 
 Cantidad de colores: 5, Largo de la uña: M, Material: PolyGel, Decoraciones simples: 1, Decoraciones sofisticadas: 1, Diseños en cristales: 1, Diseños 3D: 1, Tiempo estimado: 105 mins, Valor total: 24800.0 pesos || 
 Cantidad de colores: 0, Largo de la uña: Natural, Material: PolyGel, Decoraciones simples: 0, Decoraciones sofisticadas: 0, Diseños en cristales: 0, Diseños 3D: 0, Tiempo estimado: 50 mins, Valor total: 13000.0 pesos || 
+Cantidad de colores: 1, Largo de la uña: Natural, Material: Acrilico, Decoraciones simples: 6, Decoraciones sofisticadas: 0, Diseños en cristales: 0, Diseños 3D: 1, Tiempo estimado: 101 mins, Valor total: 18800.0 pesos || 

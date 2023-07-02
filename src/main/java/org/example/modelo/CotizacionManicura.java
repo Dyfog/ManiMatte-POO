@@ -75,8 +75,8 @@ public class CotizacionManicura {
 		return valorEstimado;
 	}
 
-	public float iva(){
-		return (float) (this.valorEstimado*0.19);
+	public float iva(float neto){
+		return (float) (neto*1.19);
 	}
 
 	public CotizacionManicura() {
@@ -95,7 +95,7 @@ public class CotizacionManicura {
 		this.material = material;
 		this.diseño = diseño;
 		this.decoracion = decoracion;
-		this.valorEstimado = valorTotal();
+		this.valorEstimado = iva(valorTotal());
 		this.tiempoEstimado = tiempoTotal();
 
 	}
@@ -106,4 +106,5 @@ public class CotizacionManicura {
 							Calculo.calcTiempoLargo(this.largo);
 		return tiempoEstimado;
 	}
+
 }
