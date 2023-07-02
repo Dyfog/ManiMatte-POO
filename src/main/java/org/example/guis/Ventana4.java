@@ -125,8 +125,14 @@ public class Ventana4 extends JFrame implements ActionListener {
             Controlador.cotizacion = null;
         }
         if (e.getSource()==guardar){
-            Controlador.cerrarVentana4();
-            Controlador.abrirVentana5();
+            try {
+                Controlador.cotizacion.guardarse();
+                Controlador.cerrarVentana4();
+                Controlador.abrirVentana5();
+            }catch (Exception e1){
+                JOptionPane.showMessageDialog(null,"Ha ocurrido un error inesperado al intentar guardar su cotizacion");
+            }
+
         }
     }
 }

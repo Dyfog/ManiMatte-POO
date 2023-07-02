@@ -52,7 +52,6 @@ public class Ventana5 extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==iniciarOtra){
-            ManejoArchivo.guardarCotizacion(Controlador.cotizacion);
             Controlador.cerrarVentana5();
             Controlador.resetVentanas();
             Controlador.cotizacion = null;

@@ -1,5 +1,6 @@
 package org.example.modelo;
 
+import org.example.datos.ManejoArchivo;
 import org.example.modelo.Calculo;
 
 public class CotizacionManicura {
@@ -105,6 +106,10 @@ public class CotizacionManicura {
 							Calculo.calcTiempoDiseño(this.diseño)+Calculo.calcTiempoMaterial(this.material)+
 							Calculo.calcTiempoLargo(this.largo);
 		return tiempoEstimado;
+	}
+
+	public void guardarse(){
+		ManejoArchivo.guardarCotizacion(this);
 	}
 
 }
