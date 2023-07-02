@@ -50,7 +50,7 @@ public class Ventana4 extends JFrame implements ActionListener {
 
         guardarText = new JLabel("¿Desea guardar su cotización?");
 
-        atras = new JButton("Atras");
+        atras = new JButton("Atrás");
 
         guardar = new JButton("Guardar y finalizar");
 
