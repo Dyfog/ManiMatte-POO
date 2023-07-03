@@ -6,16 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Ventana1 extends JFrame implements ActionListener {
-    JLabel bienvenida;
-    JLabel largosText;
-    JComboBox<String> largos;
-    JLabel materialText;
-    JComboBox<String> materiales;
-    JLabel cantColoresText;
-    JSlider cantColores;
-    JButton siguiente;
+    protected JLabel bienvenida;
+    protected JLabel largosText;
+    protected JComboBox<String> largos;
+    protected JLabel materialText;
+    protected JComboBox<String> materiales;
+    protected JLabel cantColoresText;
+    protected JSlider cantColores;
+    protected JButton siguiente;
 
-    public Ventana1() {
+    protected Ventana1() {
         initVentana1();
         this.setTitle("Cotizador de Manicura");
         this.setSize(600, 400);
@@ -23,7 +23,7 @@ public class Ventana1 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void initVentana1() {
+    private void initVentana1() {
         JPanel panel = new JPanel(new BorderLayout());
 
         // Panel superior con el texto de bienvenida

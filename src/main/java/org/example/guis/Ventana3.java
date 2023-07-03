@@ -7,19 +7,19 @@ import java.awt.event.ActionListener;
 
 public class Ventana3 extends JFrame implements ActionListener {
 
-    JPanel panelInstrucciones = new JPanel();
-    JPanel panelCristales = new JPanel();
-    JPanel panelAccesorios = new JPanel();
-    JPanel panelBotones = new JPanel();
-    JLabel instrucciones;
-    JLabel cristalesText;
-    JSlider cristales;
-    JLabel accesorios3dText;
-    JSlider accesorios3d;
-    JButton atras;
-    JButton siguiente;
+    protected JPanel panelInstrucciones = new JPanel();
+    protected JPanel panelCristales = new JPanel();
+    protected JPanel panelAccesorios = new JPanel();
+    protected JPanel panelBotones = new JPanel();
+    protected JLabel instrucciones;
+    protected JLabel cristalesText;
+    protected JSlider cristales;
+    protected JLabel accesorios3dText;
+    protected JSlider accesorios3d;
+    protected JButton atras;
+    protected JButton siguiente;
 
-    public Ventana3() {
+    protected Ventana3() {
         initVentana3();
         this.setTitle("Cotizador de Manicura");
         this.setSize(600, 400);
@@ -27,7 +27,7 @@ public class Ventana3 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void initVentana3() {
+    private void initVentana3() {
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new GridLayout(4, 1));
 

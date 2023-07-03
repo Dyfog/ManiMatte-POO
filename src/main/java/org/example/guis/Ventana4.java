@@ -7,25 +7,25 @@ import java.awt.event.ActionListener;
 
 public class Ventana4 extends JFrame implements ActionListener {
 
-    JPanel panelTextoGuia = new JPanel();
-    JPanel panelResumen = new JPanel();
-    JPanel panelTiempo = new JPanel();
-    JPanel panelValor = new JPanel();
-    JPanel panelBotonesTexto = new JPanel();
-    JPanel panelBotones = new JPanel();
+    protected JPanel panelTextoGuia = new JPanel();
+    protected JPanel panelResumen = new JPanel();
+    protected JPanel panelTiempo = new JPanel();
+    protected JPanel panelValor = new JPanel();
+    protected JPanel panelBotonesTexto = new JPanel();
+    protected JPanel panelBotones = new JPanel();
 
-    JLabel textoGuia;
-    JLabel opcionesText;
-    JScrollPane eleccionScrollPane;
-    JLabel tiempoText;
-    JLabel tiempo;
-    JLabel valorText;
-    JLabel valor;
-    JLabel guardarText;
-    JButton atras;
-    JButton guardar;
+    protected JLabel textoGuia;
+    protected JLabel opcionesText;
+    protected JScrollPane eleccionScrollPane;
+    protected JLabel tiempoText;
+    protected JLabel tiempo;
+    protected JLabel valorText;
+    protected JLabel valor;
+    protected JLabel guardarText;
+    protected JButton atras;
+    protected JButton guardar;
 
-    public Ventana4() {
+    protected Ventana4() {
         initVentana4();
         this.setTitle("Cotizador de Manicura");
         this.setSize(600, 400);
@@ -33,7 +33,7 @@ public class Ventana4 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void initVentana4() {
+    private void initVentana4() {
         textoGuia = new JLabel("Resumen de Cotizacion");
         panelTextoGuia.add(textoGuia);
 

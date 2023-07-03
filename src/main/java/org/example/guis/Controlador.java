@@ -9,54 +9,57 @@ import java.util.Map;
 public enum Controlador {
     INSTANCE;
 
-    public static Ventana1 ventana1 = new Ventana1();
-    public static Ventana2 ventana2 = new Ventana2();
-    public static Ventana3 ventana3 = new Ventana3();
-    public static Ventana4 ventana4 = new Ventana4();
-    public static Ventana5 ventana5 = new Ventana5();
-    public static CotizacionManicura cotizacion;
+    protected static Ventana1 ventana1 = new Ventana1();
+    protected static Ventana2 ventana2 = new Ventana2();
+    protected static Ventana3 ventana3 = new Ventana3();
+    protected static Ventana4 ventana4 = new Ventana4();
+    protected static Ventana5 ventana5 = new Ventana5();
+    protected static CotizacionManicura cotizacion;
 
-    public static void abrirVentana1(){
+    public static void iniciarVentanas(){
+        abrirVentana1();
+    }
+    protected static void abrirVentana1(){
         ventana1.setVisible(true);
     }
 
-    public static void abrirVentana2(){
+    protected static void abrirVentana2(){
         ventana2.setVisible(true);
     }
 
-    public static void abrirVentana3(){
+    protected static void abrirVentana3(){
         ventana3.setVisible(true);
     }
 
-    public static void abrirVentana4(){
+    protected static void abrirVentana4(){
         ventana4.setVisible(true);
     }
 
-    public static void abrirVentana5(){
+    protected static void abrirVentana5(){
         ventana5.setVisible(true);
     }
 
-    public static void cerrarVentana1(){
+    protected static void cerrarVentana1(){
         ventana1.setVisible(false);
     }
 
-    public static void cerrarVentana2(){
+    protected static void cerrarVentana2(){
         ventana2.setVisible(false);
     }
 
-    public static void cerrarVentana3(){
+    protected static void cerrarVentana3(){
         ventana3.setVisible(false);
     }
 
-    public static void cerrarVentana4(){
+    protected static void cerrarVentana4(){
         ventana4.setVisible(false);
     }
 
-    public static void cerrarVentana5(){
+    protected static void cerrarVentana5(){
         ventana5.setVisible(false);
     }
 
-    public static void actualizarVentanaResumen(){
+    protected static void actualizarVentanaResumen(){
         String largo = mapLargos.get(ventana1.largos.getSelectedIndex());
         String material = mapMateriales.get(ventana1.materiales.getSelectedIndex());
         int cantColores = ventana1.cantColores.getValue();
@@ -78,7 +81,7 @@ public enum Controlador {
 
 
     }
-    public static void resetVentanas(){
+    protected static void resetVentanas(){
         ventana1.materiales.setSelectedIndex(0);
         ventana1.largos.setSelectedIndex(0);
         ventana1.cantColores.setValue(0);

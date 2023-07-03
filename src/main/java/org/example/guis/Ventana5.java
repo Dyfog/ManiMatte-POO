@@ -8,10 +8,10 @@ import java.awt.event.ActionListener;
 
 public class Ventana5 extends JFrame implements ActionListener {
 
-    JLabel texto;
-    JButton iniciarOtra;
+    protected JLabel texto;
+    protected JButton iniciarOtra;
 
-    public Ventana5() {
+    protected Ventana5() {
         initVentana5();
         setTitle("Cotizador de Manicura");
         setSize(310, 150);
@@ -19,7 +19,7 @@ public class Ventana5 extends JFrame implements ActionListener {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void initVentana5() {
+    private void initVentana5() {
         JPanel panel = new JPanel();
         texto = new JLabel("Cotización finalizada! Gracias por su preferencia");
 

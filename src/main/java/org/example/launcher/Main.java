@@ -4,6 +4,6 @@ import org.example.guis.Controlador;
 
 public class Main {
     public static void main(String[] args) {
-        Controlador.abrirVentana1();
+        Controlador.iniciarVentanas();
     }
 }

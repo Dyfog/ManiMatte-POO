@@ -7,19 +7,19 @@ import java.awt.event.ActionListener;
 
 public class Ventana2 extends JFrame implements ActionListener {
 
-    JPanel panelInstrucciones = new JPanel();
-    JPanel panelSimples = new JPanel();
-    JPanel panelSofisticados = new JPanel();
-    JPanel panelBotones = new JPanel();
-    JLabel instrucciones;
-    JLabel simplesText;
-    JSlider simples;
-    JLabel sofisticadosText;
-    JSlider sofisticados;
-    JButton atras;
-    JButton siguiente;
+    protected JPanel panelInstrucciones = new JPanel();
+    protected JPanel panelSimples = new JPanel();
+    protected JPanel panelSofisticados = new JPanel();
+    protected JPanel panelBotones = new JPanel();
+    protected JLabel instrucciones;
+    protected JLabel simplesText;
+    protected JSlider simples;
+    protected JLabel sofisticadosText;
+    protected JSlider sofisticados;
+    protected JButton atras;
+    protected JButton siguiente;
 
-    public Ventana2() {
+    protected Ventana2() {
         initVentana2();
         this.setTitle("Cotizador de Manicura");
         this.setSize(600, 400);
@@ -27,7 +27,7 @@ public class Ventana2 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void initVentana2() {
+    private void initVentana2() {
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new GridLayout(4, 1));
 

@@ -12,14 +12,6 @@ public class Util {
 		return true;
 	}
 
-	public static int ingresarSoloEntero() {
-		Scanner in = new Scanner(System.in);
-		while (!in.hasNextInt()) {
-			System.out.println("Entrada no válida. Ingrese un número entero:");
-			in.next();
-		}
-		int numero = in.nextInt();
-		return numero;
-	}
+
 
 }
