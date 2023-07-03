@@ -6,6 +6,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalTime;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ManejoArchivo {
 
@@ -13,27 +16,12 @@ public class ManejoArchivo {
 
 
 	private static String crearLineaCotizacion(CotizacionManicura cotizacion) {
-		String largo;
-		String material;
-		if (cotizacion.getLargo()==0){
-			largo = "Natural";
-		} else if (cotizacion.getLargo()==1) {
-			largo = "S";
-		} else if (cotizacion.getLargo()==2) {
-			largo = "M";
-		} else {
-			largo = "L";
-		}
+		String largo= mapLargos.get(cotizacion.getLargo());
+		String material= mapMateriales.get(cotizacion.getMaterial());
+		String hora = obtenerHora();
 
-		if (cotizacion.getMaterial()==0){
-			material = "Acrilico";
-		} else if (cotizacion.getMaterial()==1) {
-			material = "PolyGel";
-		}else {
-			material = "GelX";
-		}
 		//falta el tiempo y valor de la cotizacion
-		String linea = "Cantidad de colores: "+String.valueOf(cotizacion.getCantColores())+", Largo de la uña: "+largo
+		String linea = "Hora: "+hora+", Cantidad de colores: "+String.valueOf(cotizacion.getCantColores())+", Largo de la uña: "+largo
 				+", Material: "+material+", Decoraciones simples: "+cotizacion.getDecoracion()[0]
 				+", Decoraciones sofisticadas: "+cotizacion.getDecoracion()[1]+", Diseños en cristales: "
 				+cotizacion.getDiseño()[0]+", Diseños 3D: "+cotizacion.getDiseño()[1]+", Tiempo estimado: "
@@ -67,7 +55,6 @@ public class ManejoArchivo {
 
 			bufferedWriter.close();
 
-			System.out.println("Se agregó la línea al archivo correctamente.");
 		} catch (IOException e) {
 			System.out.println("Se produjo un error al agregar la línea al archivo: " + e.getMessage());
 		}
@@ -85,5 +72,26 @@ public class ManejoArchivo {
 	private static boolean validarExistenciaArchivo() {
 		File file = new File(ruta);
 		return file.exists();
+	}
+
+	private static String obtenerHora(){
+		LocalTime horaActual = LocalTime.now();
+		String horaFormateada = horaActual.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss"));
+		return horaFormateada;
+	}
+
+	private static Map<Integer,String> mapLargos = new HashMap<Integer,String>();
+	static {
+		mapLargos.put(0,"Natural");
+		mapLargos.put(1,"S");
+		mapLargos.put(2,"M");
+		mapLargos.put(3,"L");
+	}
+
+	private static Map<Integer,String> mapMateriales = new HashMap<>();
+	static {
+		mapMateriales.put(0,"Acrilico");
+		mapMateriales.put(1,"PolyGel");
+		mapMateriales.put(2,"GelX");
 	}
 }

@@ -5,10 +5,10 @@ import org.example.util.Util;
 public class Calculo {
 
 	/**
-	 * Este metodo hace el calculo del valor del material elegido dependiendo eleccion hecha.
+	 * Este metodo hace el calculo del valor de el material dependiendo de la eleccion hecha.
 	 *
-	 * @param eleccionMaterial Largo elegido del material, los valores van del 0 al 2, cada uno representando un material en especifico.
-	 * @return El valor calculado del material elegido.
+	 * @param eleccionMaterial Valor asignado para el material, este se ingresa como eleccion numerica, siendo 0=Acrilico, 1=PolyGel, 2=GelX.
+	 * @return El valor calculado de el material elegido.
 	 */
 	public static int calcValorMaterial(int eleccionMaterial) {
 		int valorMaterial;
@@ -43,7 +43,7 @@ public class Calculo {
 	/**
 	 * Este metodo hace el calculo del valor del largo dependiendo de la eleccion hecha.
 	 *
-	 * @param eleccionLargo Valor asigando para el largo elegido, va de 0 a 3.
+	 * @param eleccionLargo Valor asigando para el largo elegido, va de 0 a 3, siendo 0=Natural, 1=S, 2=M, 3=L.
 	 * @return El valor calculado del largo elegido.
 	 */
 	public static int calcValorLargo(int eleccionLargo) {
@@ -79,7 +79,12 @@ public class Calculo {
 		return valor;
 	}
 
-
+	/**
+	 * Este metodo hace el calculo del valor de la cantidad de colores dependiendo de la eleccion hecha.
+	 *
+	 * @param cantColores Valor asignado para la cantidad de colores, pueden ir de 0 a 5
+	 * @return El valor calculado de la cantidad de colores elegida.
+	 */
 	public static int calcValorColores(int cantColores) {
 		int valorColores = 0;
 		if (Util.validarRango(cantColores,0,2)) {
@@ -90,6 +95,12 @@ public class Calculo {
 		return valorColores;
 	}
 
+	/**
+	 * Este metodo hace el calculo del tiempo de el material dependiendo de la eleccion hecha.
+	 *
+	 * @param eleccionMaterial Valor asignado para el material, este se ingresa como eleccion numerica, siendo 0=Acrilico, 1=PolyGel, 2=GelX.
+	 * @return El tiempo calculado de el material elegido.
+	 */
 	public static int calcTiempoMaterial(int eleccionMaterial) {
 		int minutos;
 		switch (eleccionMaterial){
@@ -108,12 +119,24 @@ public class Calculo {
 		return minutos;
 	}
 
+	/**
+	 * Este metodo hace el calculo del tiempo del los diseños elegidos dependiendo eleccion hecha.
+	 *
+	 * @param diseños Arreglo de 2 elementos con la cantidad de diseños simples y sofisticados, la suma de ellos no puede superar el valor 10.
+	 * @return El tiempo calculado de el conjunto de los diseños elegidos.
+	 */
 	public static int calcTiempoDiseño(int [] diseños) {
 
 		int minutos = ((diseños[0] * 3) + (diseños[1] * 7));
 		return minutos;
 	}
 
+	/**
+	 * Este metodo hace el calculo del tiempo del largo dependiendo de la eleccion hecha.
+	 *
+	 * @param eleccionLargo Valor asigando para el largo elegido, va de 0 a 3, siendo 0=Natural, 1=S, 2=M, 3=L.
+	 * @return El tiempo calculado del largo elegido.
+	 */
 	public static int calcTiempoLargo(int eleccionLargo) {
 		int minutos;
 		switch (eleccionLargo){
@@ -135,12 +158,24 @@ public class Calculo {
 		return minutos;
 	}
 
+	/**
+	 * Este metodo hace el calculo del tiempo de las decoraciones dependiendo de la eleccion hecha.
+	 *
+	 * @param decoraciones Arreglo de 2 posiciones con la cantidad de decoraciones, cirstales y decoraciones 3d respectivamente, la suma de ellos no puede superar el valor 10.
+	 * @return El tiempo calculado de el conjunto de los decoraciones elegidas.
+	 */
 	public static int calcTiempoDecoracion(int [] decoraciones) {
 
 		int minutos = (decoraciones[0]*4)+(decoraciones[1]*6);
 		return minutos;
 	}
 
+	/**
+	 * Este metodo hace el calculo del tiempo de la cantidad de colores dependiendo de la eleccion hecha.
+	 *
+	 * @param cantColores Valor asignado para la cantidad de colores, pueden ir de 0 a 5
+	 * @return El tiempo calculado de la cantidad de colores elegida.
+	 */
 	public static int calcTiempoColores(int cantColores) {
 
 		if (Util.validarRango(cantColores,0,2)) {
