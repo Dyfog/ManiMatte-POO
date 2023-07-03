@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Esta clase (ventana) se hace cargo de recopilar datos del usuario para la cotizacion, en este caso las decoraciones, ya sean cristales o accesorios 3D.
+ */
 public class Ventana3 extends JFrame implements ActionListener {
 
     protected JPanel panelInstrucciones = new JPanel();
@@ -19,6 +22,9 @@ public class Ventana3 extends JFrame implements ActionListener {
     protected JButton atras;
     protected JButton siguiente;
 
+    /**
+     * Este constructor crea la ventana3, dandole su tamaño y todos los valores necesarios.
+     */
     protected Ventana3() {
         initVentana3();
         this.setTitle("Cotizador de Manicura");
@@ -27,6 +33,9 @@ public class Ventana3 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    /**
+     * Este metodo es el encargado de darle a la ventana sus botones, campos de texto y todo lo necesario para su correcto funcionamiento.
+     */
     private void initVentana3() {
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new GridLayout(4, 1));

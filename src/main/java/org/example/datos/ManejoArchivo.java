@@ -10,11 +10,18 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Esta clase se encarga del manejo de archivos e ingreso de datos de las cotizaciones
+ */
 public class ManejoArchivo {
 
 	private static String ruta = "archivoCotizaciones.txt";
 
-
+	/**
+	 * Este metodo crea la linea de texto que da cuenta de los datos de la cotizacion.
+	 * @param cotizacion Este es el objeto CotizacionManicura, el cual representa la cotizacion hecha por el usuario.
+	 * @return La linea de texto de la cotizacion.
+	 */
 	private static String crearLineaCotizacion(CotizacionManicura cotizacion) {
 		String largo= mapLargos.get(cotizacion.getLargo());
 		String material= mapMateriales.get(cotizacion.getMaterial());
@@ -29,7 +36,9 @@ public class ManejoArchivo {
 		return linea;
 	}
 
-
+	/**
+	 * Este metodo revisa si el archivo que busca existe, de no existir, lo crea.
+	 */
 	private static void crearArchivo() {
 		File archivo = new File(ruta);
 		try {
@@ -44,7 +53,10 @@ public class ManejoArchivo {
 		}
 	}
 
-
+	/**
+	 * Este metodo añade la linea de texto de la cotizacion al archivo donde se guardan.
+	 * @param lineaCotizacion es la linea de texto que representa la cotizacion.
+	 */
 	private static void añadirCotizacionAlArchivo(String lineaCotizacion) {
 		try {
 			FileWriter fileWriter = new FileWriter(ruta, true); // El segundo parámetro "true" indica que se añadirá al final del archivo
@@ -60,6 +72,10 @@ public class ManejoArchivo {
 		}
 	}
 
+	/**
+	 * Este metodo hace el proceso completo que corresponde al guardado, desde hacer la linea de texto, verificar existencia del archivo, y finalmente guardar.
+	 * @param cotizacion Este es el objeto CotizacionManicura, el cual representa la cotizacion hecha por el usuario
+	 */
 	public static void guardarCotizacion(CotizacionManicura cotizacion){
 		if(!validarExistenciaArchivo()){
 			crearArchivo();
@@ -68,12 +84,19 @@ public class ManejoArchivo {
 		añadirCotizacionAlArchivo(lineaCotizacion);
 	}
 
-
+	/**
+	 * Metodo encargado de revisar si el archivo buscado existe o no
+	 * @return Un boleano que da cuenta si existe o no el archivo.
+	 */
 	private static boolean validarExistenciaArchivo() {
 		File file = new File(ruta);
 		return file.exists();
 	}
 
+	/**
+	 * Metodo usado para obtener la hora actual del dispositivo, usada para la cotizacion
+	 * @return La hora actual del dispositivo donde se ejecuta el programa.
+	 */
 	private static String obtenerHora(){
 		LocalTime horaActual = LocalTime.now();
 		String horaFormateada = horaActual.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss"));

@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Esta clase (ventana) se hace cargo de recopilar datos del usuario para la cotizacion, tales como largo, material y cantidad de colores.
+ */
 public class Ventana1 extends JFrame implements ActionListener {
     protected JLabel bienvenida;
     protected JLabel largosText;
@@ -15,6 +18,9 @@ public class Ventana1 extends JFrame implements ActionListener {
     protected JSlider cantColores;
     protected JButton siguiente;
 
+    /**
+     * Este constructor crea la ventana1, dandole su tamaño y todos los valores necesarios.
+     */
     protected Ventana1() {
         initVentana1();
         this.setTitle("Cotizador de Manicura");
@@ -23,6 +29,9 @@ public class Ventana1 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    /**
+     * Este metodo es el encargado de darle a la ventana sus botones, campos de texto y todo lo necesario para su correcto funcionamiento.
+     */
     private void initVentana1() {
         JPanel panel = new JPanel(new BorderLayout());
 

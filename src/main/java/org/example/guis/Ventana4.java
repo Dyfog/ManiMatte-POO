@@ -5,12 +5,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Esta clase (ventana) se hace cargo de mostrar un resumen de datos de la cotizacion, incluyendo tambien el valor de la misma y su tiempo estimado.
+ */
 public class Ventana4 extends JFrame implements ActionListener {
 
     protected JPanel panelTextoGuia = new JPanel();
     protected JPanel panelResumen = new JPanel();
-    protected JPanel panelTiempo = new JPanel();
-    protected JPanel panelValor = new JPanel();
+
     protected JPanel panelBotonesTexto = new JPanel();
     protected JPanel panelBotones = new JPanel();
 
@@ -25,6 +27,9 @@ public class Ventana4 extends JFrame implements ActionListener {
     protected JButton atras;
     protected JButton guardar;
 
+    /**
+     * Este constructor crea la ventana4, dandole su tamaño y todos los valores necesarios.
+     */
     protected Ventana4() {
         initVentana4();
         this.setTitle("Cotizador de Manicura");
@@ -33,6 +38,9 @@ public class Ventana4 extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
+    /**
+     * Este metodo es el encargado de darle a la ventana sus botones, campos de texto y todo lo necesario para su correcto funcionamiento.
+     */
     private void initVentana4() {
         textoGuia = new JLabel("Resumen de Cotizacion");
         panelTextoGuia.add(textoGuia);

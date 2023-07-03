@@ -2,6 +2,9 @@ package org.example.modelo;
 
 import org.example.util.Util;
 
+/**
+ * Esta clase se hace cargo de todos los calculos a realizar para pasar de una cotizacion a su valor y tiempo estimado.
+ */
 public class Calculo {
 
 	/**

@@ -1,5 +1,8 @@
 package org.example.util;
 
+/**
+ * Esta clase contiene utilitarios usados en el proyecto.
+ */
 public class Util {
 
 	/**

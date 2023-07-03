@@ -2,6 +2,9 @@ package org.example.modelo;
 
 import org.example.datos.ManejoArchivo;
 
+/**
+ * Esta clase se encarga de todos los metodos relacionados al funcionamiento de una cotizacion.
+ */
 public class CotizacionManicura {
 
 	private int cantColores;

@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Esta clase hace el cambio entre ventanas, es el medio por el cual se hacen las entradas y salidas.
+ */
 public enum Controlador {
     INSTANCE;
 
@@ -16,49 +19,86 @@ public enum Controlador {
     protected static Ventana5 ventana5 = new Ventana5();
     protected static CotizacionManicura cotizacion;
 
+    /**
+     * Este metodo es el usado por el main para iniciar la secuencia de ventanas, y por tanto el programa.
+     */
     public static void iniciarVentanas(){
         abrirVentana1();
     }
+
+    /**
+     * metodo que pone la ventana 1 visible
+     */
     protected static void abrirVentana1(){
         ventana1.setVisible(true);
     }
 
+    /**
+     * metodo que pone la ventana 2 visible
+     */
     protected static void abrirVentana2(){
         ventana2.setVisible(true);
     }
 
+    /**
+     * metodo que pone la ventana 3 visible
+     */
     protected static void abrirVentana3(){
         ventana3.setVisible(true);
     }
 
+    /**
+     * metodo que pone la ventana 4 visible
+     */
     protected static void abrirVentana4(){
         ventana4.setVisible(true);
     }
 
+    /**
+     * metodo que pone la ventana 5 visible
+     */
     protected static void abrirVentana5(){
         ventana5.setVisible(true);
     }
 
+    /**
+     * metodo que pone la ventana 1 no visible
+     */
     protected static void cerrarVentana1(){
         ventana1.setVisible(false);
     }
 
+    /**
+     * metodo que pone la ventana 2 no visible
+     */
     protected static void cerrarVentana2(){
         ventana2.setVisible(false);
     }
 
+    /**
+     * metodo que pone la ventana 3 no visible
+     */
     protected static void cerrarVentana3(){
         ventana3.setVisible(false);
     }
 
+    /**
+     * metodo que pone la ventana 4 no visible
+     */
     protected static void cerrarVentana4(){
         ventana4.setVisible(false);
     }
 
+    /**
+     * metodo que pone la ventana 5 no visible
+     */
     protected static void cerrarVentana5(){
         ventana5.setVisible(false);
     }
 
+    /**
+     * Este metodo ocurre cuando se quiere pasar a la ventana 4, y actualiza los datos del resumen para que siempre esten correctos
+     */
     protected static void actualizarVentanaResumen(){
         String largo = mapLargos.get(ventana1.largos.getSelectedIndex());
         String material = mapMateriales.get(ventana1.materiales.getSelectedIndex());
@@ -81,6 +121,10 @@ public enum Controlador {
 
 
     }
+
+    /**
+     * Este metodo se usa al terminar la cotizacion y le da los valores por defecto a todas las entradas.
+     */
     protected static void resetVentanas(){
         ventana1.materiales.setSelectedIndex(0);
         ventana1.largos.setSelectedIndex(0);
