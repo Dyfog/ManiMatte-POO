@@ -22,7 +22,7 @@ public class ManejoArchivo {
 	 * @param cotizacion Este es el objeto CotizacionManicura, el cual representa la cotizacion hecha por el usuario.
 	 * @return La linea de texto de la cotizacion.
 	 */
-	private static String crearLineaCotizacion(CotizacionManicura cotizacion) {
+	protected static String crearLineaCotizacion(CotizacionManicura cotizacion) {
 		String largo= mapLargos.get(cotizacion.getLargo());
 		String material= mapMateriales.get(cotizacion.getMaterial());
 		String hora = obtenerHora();
@@ -39,7 +39,7 @@ public class ManejoArchivo {
 	/**
 	 * Este metodo revisa si el archivo que busca existe, de no existir, lo crea.
 	 */
-	private static void crearArchivo() {
+	protected static void crearArchivo() {
 		File archivo = new File(ruta);
 		try {
 			boolean creado = archivo.createNewFile();
@@ -57,7 +57,7 @@ public class ManejoArchivo {
 	 * Este metodo añade la linea de texto de la cotizacion al archivo donde se guardan.
 	 * @param lineaCotizacion es la linea de texto que representa la cotizacion.
 	 */
-	private static void añadirCotizacionAlArchivo(String lineaCotizacion) {
+	protected static void añadirCotizacionAlArchivo(String lineaCotizacion) {
 		try {
 			FileWriter fileWriter = new FileWriter(ruta, true); // El segundo parámetro "true" indica que se añadirá al final del archivo
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -88,7 +88,7 @@ public class ManejoArchivo {
 	 * Metodo encargado de revisar si el archivo buscado existe o no
 	 * @return Un boleano que da cuenta si existe o no el archivo.
 	 */
-	private static boolean validarExistenciaArchivo() {
+	protected static boolean validarExistenciaArchivo() {
 		File file = new File(ruta);
 		return file.exists();
 	}
@@ -97,7 +97,7 @@ public class ManejoArchivo {
 	 * Metodo usado para obtener la hora actual del dispositivo, usada para la cotizacion
 	 * @return La hora actual del dispositivo donde se ejecuta el programa.
 	 */
-	private static String obtenerHora(){
+	protected static String obtenerHora(){
 		LocalTime horaActual = LocalTime.now();
 		String horaFormateada = horaActual.format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss"));
 		return horaFormateada;
