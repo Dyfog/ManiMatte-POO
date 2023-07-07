@@ -1,6 +1,5 @@
 package org.example.modelo;
 
-import org.example.modelo.CotizacionManicura;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
