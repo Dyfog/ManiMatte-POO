@@ -1,6 +1,7 @@
-package org.example;
+package org.example.modelo;
 
 
+import org.example.modelo.Calculo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -62,7 +63,7 @@ class CalculoTest {
 
     @Test
     void calculoMaterialTest(){
-        assertEquals(6000,Calculo.calcValorMaterial(material1));
+        assertEquals(6000, Calculo.calcValorMaterial(material1));
         assertEquals(5000,Calculo.calcValorMaterial(material2));
         assertEquals(4000,Calculo.calcValorMaterial(material3));
     }

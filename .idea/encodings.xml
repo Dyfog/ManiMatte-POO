@@ -2,12 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/example/Calculo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/org/example/Cotizacion.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/example/ManejoArchivo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/datos/ManejoArchivo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/modelo/Calculo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/org/example/CalculoTest.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/test/java/org/example/UtilTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/org/example/datos/ManejoArchivoTest.java" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>
